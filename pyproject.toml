@@ -1,0 +1,10 @@
+[project]
+name = "monitoring-nicegui"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "nicegui>=2.14.1",
+    "starlette==0.46.1",
+]
