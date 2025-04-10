@@ -30,7 +30,7 @@ class Config:
             "primary": "#2196F3",
             "secondary": "#64B5F6",
             "accent": "#90CAF9"
-        }
+        },
     }
 
     # 登录配置
