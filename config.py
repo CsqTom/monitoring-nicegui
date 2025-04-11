@@ -2,6 +2,9 @@ from typing import List, Tuple
 
 
 class Config:
+    # 后端地址
+    API_BASE = "http://localhost:12309"
+
     # 系统配置
     APP_NAME = "监控管理系统"
     LOGO = "assets/logo.png"
@@ -9,9 +12,9 @@ class Config:
 
     # 路由配置 (路由名称, 显示名称, 组件路径)
     ROUTES: List[Tuple[str, str, str]] = [
-        ("dashboard", "仪表盘", "pages.dashboard.Dashboard"),
-        ("users", "用户管理", "pages.users.Users"),
-        ("settings", "系统设置", "pages.settings.settings.Settings")
+        ("dashboard", "仪表盘",),
+        ("users", "用户管理",),
+        ("settings", "系统设置",)
     ]
 
     # 主题配置

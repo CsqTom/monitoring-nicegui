@@ -1,7 +1,8 @@
 from nicegui import ui
-from .algorithm import AlgorithmConfig
-from .project import ProjectConfig
-from .device import DeviceConfig
+from pages.settings_page.algorithm import AlgorithmConfig
+from pages.settings_page.project import ProjectConfig
+from pages.settings_page.device import DeviceConfig
+
 
 class Settings:
     def __init__(self):
@@ -12,11 +13,11 @@ class Settings:
                 ui.button("算法配置", on_click=lambda: self.show_tab('algorithm'))
                 ui.button("项目配置", on_click=lambda: self.show_tab('project'))
                 ui.button("设备配置", on_click=lambda: self.show_tab('device'))
-            
+
             # 右侧内容区
             self.content = ui.column().classes("flex-1 p-4")
             self.show_tab('algorithm')  # 默认显示算法配置
-    
+
     def show_tab(self, tab_name):
         self.content.clear()
         with self.content:

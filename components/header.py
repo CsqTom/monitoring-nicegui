@@ -12,9 +12,9 @@ class Header:
 
                 self.current_route = 'dashboard'
                 self.buttons = {}
-                
+
                 # Remove container classes here since they're now in main.py
-                for route_name, display_name, _ in Config.ROUTES:
+                for route_name, display_name in Config.ROUTES:
                     btn = ui.button(
                         display_name,
                         icon='home',
@@ -77,14 +77,14 @@ class Header:
     def navigate(self, route_name):
         # 更新按钮状态
         for name, btn in self.buttons.items():
-            btn._props['color'] = 'primary' if name == route_name else None  
+            btn._props['color'] = 'primary' if name == route_name else None
             # 更改背景色
             if name == route_name:
                 btn.style('background-color: #f0f0f0;')  # 选中时的背景色
             else:
                 btn.style('background-color: transparent;')  # 未选中时的背景色
             btn.update()
-        
+
         # 更新内容区
         content = ui.context.client.content
         content.clear()
@@ -96,5 +96,5 @@ class Header:
                 from pages.users import Users
                 Users()
             elif route_name == 'settings':
-                from pages.settings.settings import Settings
+                from pages.settings_page.settings import Settings
                 Settings()
