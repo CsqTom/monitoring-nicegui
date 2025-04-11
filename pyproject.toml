@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "ex4nicegui>=0.8.6",
     "nicegui>=2.14.1",
+    "niceguitoolkit>=0.3.0",
     "starlette==0.46.1",
 ]

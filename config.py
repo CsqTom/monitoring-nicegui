@@ -11,7 +11,7 @@ class Config:
     ROUTES: List[Tuple[str, str, str]] = [
         ("dashboard", "仪表盘", "pages.dashboard.Dashboard"),
         ("users", "用户管理", "pages.users.Users"),
-        ("settings", "系统设置", "pages.settings.Settings")
+        ("settings", "系统设置", "pages.settings.settings.Settings")
     ]
 
     # 主题配置

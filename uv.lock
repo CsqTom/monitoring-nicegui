@@ -121,6 +121,18 @@ wheels = [
 ]
 
 [[package]]
+name = "asttokens"
+version = "2.4.1"
+source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/45/1d/f03bcb60c4a3212e15f99a56085d93093a497718adf828d050b9d675da81/asttokens-2.4.1.tar.gz", hash = "sha256:b03869718ba9a6eb027e134bfdf69f38a236d681c83c160d510768af11254ba0" }
+wheels = [
+    { url = "https://repo.huaweicloud.com/repository/pypi/packages/45/86/4736ac618d82a20d87d2f92ae19441ebc7ac9e7a581d7e58bbe79233b24a/asttokens-2.4.1-py2.py3-none-any.whl", hash = "sha256:051ed49c3dcae8913ea7cd08e46a606dba30b79993209636c4875bc1d637bc24" },
+]
+
+[[package]]
 name = "attrs"
 version = "25.3.0"
 source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
@@ -223,6 +235,29 @@ source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
 sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/ae/ed/aefcc8cd0ba62a0560c3c18c33925362d46c6075480bfa4df87b28e169a9/docutils-0.21.2.tar.gz", hash = "sha256:3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f" }
 wheels = [
     { url = "https://repo.huaweicloud.com/repository/pypi/packages/8f/d7/9322c609343d929e75e7e5e6255e614fcc67572cfd083959cdef3b7aad79/docutils-0.21.2-py3-none-any.whl", hash = "sha256:dafca5b9e384f0e419294eb4d2ff9fa826435bf15f15b7bd45723e8ad76811b2" },
+]
+
+[[package]]
+name = "ex4nicegui"
+version = "0.8.6"
+source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
+dependencies = [
+    { name = "executing" },
+    { name = "nicegui" },
+    { name = "signe" },
+]
+sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/d1/dc/c6845c6c218cc710bef87e0212738c98cf645269924ff7f66c2623dd2398/ex4nicegui-0.8.6.tar.gz", hash = "sha256:6f125545f3cca42c365ded88d427c0746068fecd132b3972d3f402cc630e878b" }
+wheels = [
+    { url = "https://repo.huaweicloud.com/repository/pypi/packages/91/e2/ee495a359f20e03ae7a40a1daa335f12a0bf262cbd24e0d237ef68151024/ex4nicegui-0.8.6-py3-none-any.whl", hash = "sha256:24b586773baa7f7b27ca6904ad6ae2a8350bb7e66c723459dc06b6c3fc85e9d0" },
+]
+
+[[package]]
+name = "executing"
+version = "2.2.0"
+source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
+sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/91/50/a9d80c47ff289c611ff12e63f7c5d13942c65d68125160cefd768c73e6e4/executing-2.2.0.tar.gz", hash = "sha256:5d108c028108fe2551d1a7b2e8b713341e2cb4fc0aa7dcf966fa4327a5226755" }
+wheels = [
+    { url = "https://repo.huaweicloud.com/repository/pypi/packages/7b/8f/c4d9bafc34ad7ad5d8dc16dd1347ee0e507a52c3adb6bfa8887e1c6a26ba/executing-2.2.0-py2.py3-none-any.whl", hash = "sha256:11387150cad388d62750327a53d3339fad4888b39a6fe233c3afbb54ecffd3aa" },
 ]
 
 [[package]]
@@ -460,13 +495,17 @@ name = "monitoring-nicegui"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "ex4nicegui" },
     { name = "nicegui" },
+    { name = "niceguitoolkit" },
     { name = "starlette" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "ex4nicegui", specifier = ">=0.8.6" },
     { name = "nicegui", specifier = ">=2.14.1" },
+    { name = "niceguitoolkit", specifier = ">=0.3.0" },
     { name = "starlette", specifier = "==0.46.1" },
 ]
 
@@ -569,6 +608,20 @@ dependencies = [
 sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/63/ce/878f7b465cf4ba932ffa46417b00d44759bef5487dd46135d9762e1fd930/nicegui-2.14.1.tar.gz", hash = "sha256:cc8b34fe25eab8f2bf9f4399e93d811b285f44ee684a45cd6f4c14853fcdcdf5" }
 wheels = [
     { url = "https://repo.huaweicloud.com/repository/pypi/packages/21/ea/d5dddaae27403acfb6c645299394b368b479c6314cc2e0e88102a4649959/nicegui-2.14.1-py3-none-any.whl", hash = "sha256:3c5d7f71db4b26d1df0784acadd352b221c33ab85f0d3974f3a3ffdb622b9fc5" },
+]
+
+[[package]]
+name = "niceguitoolkit"
+version = "0.3.0"
+source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
+dependencies = [
+    { name = "asttokens" },
+    { name = "executing" },
+    { name = "nicegui" },
+]
+sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/5b/d9/5ec97cf76f2d016a05300b3eb0a1968e8b8a08c2c7e290303a544aa4e53f/niceguitoolkit-0.3.0.tar.gz", hash = "sha256:39d005d7db019039121860644f02348ce471eb5917e9ec539c16d634eb512a64" }
+wheels = [
+    { url = "https://repo.huaweicloud.com/repository/pypi/packages/a2/41/9b1b2f17ab43c6a5e0c1cbd3eb63fd66ef65a444bab2d1a896044ffb8e41/niceguitoolkit-0.3.0-py3-none-any.whl", hash = "sha256:6cc79bdceedc6a412ea2d50ce2957d29ad512315945e3de5661532df6604b15d" },
 ]
 
 [[package]]
@@ -890,6 +943,18 @@ wheels = [
 ]
 
 [[package]]
+name = "signe"
+version = "0.4.23"
+source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/1c/d4/79eaf8dca49c57b541915629d7ebfdfa2140d524871d962b497b98686d5b/signe-0.4.23.tar.gz", hash = "sha256:2b2fbda802eadef0ed02586237b0025b2190d8661beb1a0cf3853c78bf4fac31" }
+wheels = [
+    { url = "https://repo.huaweicloud.com/repository/pypi/packages/53/42/d154fb9b92cf13b99511d710f31fa14f59522571601a3e0703f1c9b8dd67/signe-0.4.23-py3-none-any.whl", hash = "sha256:3c8c1681ff1535970410b022014957f3d4211f5666b90d1e3c0be6936bf3f8e0" },
+]
+
+[[package]]
 name = "simple-websocket"
 version = "1.1.0"
 source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
@@ -899,6 +964,15 @@ dependencies = [
 sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/b0/d4/bfa032f961103eba93de583b161f0e6a5b63cebb8f2c7d0c6e6efe1e3d2e/simple_websocket-1.1.0.tar.gz", hash = "sha256:7939234e7aa067c534abdab3a9ed933ec9ce4691b0713c78acb195560aa52ae4" }
 wheels = [
     { url = "https://repo.huaweicloud.com/repository/pypi/packages/52/59/0782e51887ac6b07ffd1570e0364cf901ebc36345fea669969d2084baebb/simple_websocket-1.1.0-py3-none-any.whl", hash = "sha256:4af6069630a38ed6c561010f0e11a5bc0d4ca569b36306eb257cd9a192497c8c" },
+]
+
+[[package]]
+name = "six"
+version = "1.17.0"
+source = { registry = "https://repo.huaweicloud.com/repository/pypi/simple" }
+sdist = { url = "https://repo.huaweicloud.com/repository/pypi/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81" }
+wheels = [
+    { url = "https://repo.huaweicloud.com/repository/pypi/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274" },
 ]
 
 [[package]]
